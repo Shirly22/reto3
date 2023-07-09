@@ -55,6 +55,9 @@ public class CarService {
                 if (car.getDescription() != null){
                     carFound.get().setDescription(car.getDescription());
                 }
+                if (car.getMessages() != null){
+                    carFound.get().setMessages(car.getMessages());
+                }
 
                 return carRepository.save(carFound.get());
             } else {
