@@ -50,6 +50,10 @@ public class ReservationService {
                     reservationFound.get().setStatus(reservation.getStatus());
                 }
 
+                if(reservation.getCar() != null){
+                    reservationFound.get().setCar(reservation.getCar());
+                }
+
                 return reservationRepository.save(reservationFound.get());
             } else {
                 return reservation;
